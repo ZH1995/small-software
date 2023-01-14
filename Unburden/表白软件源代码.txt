@@ -1,0 +1,208 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include <windows.h>
+#include <mmsystem.h>
+#pragma comment(lib,"WINMM.LIB")
+void f1(char a)
+{
+	printf("             你每天起得很晚是不?\n");
+	printf("\n");
+	printf("\n");
+	printf("请从键盘输入：y或n\n");
+	scanf("%c",&a);
+	if(a=='y')
+	{
+		getchar();
+		system("CLS");
+	}
+	else if(a=='n')
+	{
+		printf("			睡得那么晚能起早才怪咧!!!\n");
+		printf("\n");
+		printf("\n");
+		printf("(按回车键继续)");
+		getchar();getchar();
+		system("CLS");
+	}
+}
+
+void f2(char b)
+{
+	printf("			  你每顿都感觉吃不饱是不?\n");
+	printf("\n");
+	printf("\n");
+	printf("请从键盘输入：y/n\n");
+	scanf("%c",&b);
+	if(b=='y')
+	{
+		getchar();
+		system("CLS");
+
+	}
+	else if(b=='n')
+	{
+		printf("			能吃饱也吃不好，可怜的孩···\n");
+		printf("\n");
+		printf("\n");
+		printf("(按回车键继续)");
+		getchar();getchar();
+		system("CLS");
+	}
+}
+
+void f3(char c)
+{
+	printf("              你觉得睡觉是件幸福的事是不?\n");
+	printf("\n");
+	printf("\n");
+	printf("请从键盘输入：y/n\n");
+	scanf("%c",&c);
+	if(c=='y')
+	{
+		getchar();
+		system("CLS");
+	}
+	else if(c=='n')
+	{
+		printf("			我就很喜欢睡觉\n");
+		printf("\n");
+		printf("\n");
+		printf("(按回车键继续)");
+		getchar();getchar();
+		system("CLS");
+		
+	}	
+}
+
+void f4(char d)
+{
+	printf("恭喜你，测试结果为:\n");
+	printf("                     ------------你已经成功的加入了猪的行列!!!（哈哈哈哈哈···）\n");
+	printf("\n");
+	
+	printf("按回车键继续");
+	getchar();
+	printf("\n");
+	printf("\n");
+	printf("下面的测试更精彩，加油吧，少年\n");
+	printf("\n");
+	printf("\n");
+	printf("(按回车键继续)");
+	getchar();
+	system("CLS");
+	
+}
+
+void f5(char e)
+{
+	printf("               想不想知道光棍节神秘大礼是什么?\n");
+	printf("\n");
+	printf("\n");
+	printf("请从键盘输入：y/n\n");
+	scanf("%c",&e);
+	if(e=='y')
+	{
+		getchar();
+		system("CLS");
+	}
+	else if(e=='n')
+	{
+		printf("          不想知道也得知道，哼哼!!!\n");
+		printf("\n");
+		printf("\n");
+		printf("(按回车键继续)");
+		getchar();getchar();
+		system("CLS");
+		
+	}	
+}
+
+void f6(char f)
+{
+	printf("               想知道的话就回答你是不是可想可想在双十一“脱光了”?\n");
+	printf("\n");
+	printf("\n");
+	printf("请从键盘输入:y/n\n");
+	scanf("%c",&f);
+	if(f=='y')
+	{
+		getchar();
+		system("CLS");
+	}
+	else if(f=='n')
+	{
+		printf("        此少年有如此志向，必有一番作为啊!!!\n");
+		printf("\n");
+		printf("\n");
+		printf("(按回车键继续)");
+		getchar();getchar();
+		system("CLS");
+		
+	}	
+}
+
+void f7(int g,char g1,char g2,char g3,char g4)
+{
+	printf("请输入：love\n");
+	printf("然后按下回车键,你会得到想要的答案\n");
+	scanf("%c%c%c%C",&g1,&g2,&g3,&g4);
+	if(g1=='l'&&g2=='o'&&g3=='v'&&g4=='e')
+	{
+		printf(" It is love \n");
+		printf("             *                  *\n");
+		printf("          *     *            *    *\n");
+		printf("        *          *     *         *\n");
+		printf("        *             *             *\n");
+		printf("         *                          *\n");
+		printf("           *                       *\n");
+		printf("            *                     *\n");
+		printf("              *                  *\n");
+		printf("               *               *\n");
+		printf("                 *            *\n");
+		printf("                  *         *\n");
+		printf("                    *     *\n");
+		printf("                       *\n");
+		for(g=1;g<=4;g++)
+		{	
+			sndPlaySound("张杰 - 这，就是爱(0).wav",SND_SYNC);
+		}
+	}
+	else 
+		printf("呜呜呜呜呜呜···");
+}
+
+
+
+void main()
+{
+	int g;
+	char a,b,c,d,e,f,g1,g2,g3,g4;
+	system("color 0d");
+	printf("             欢迎使用本系统            \n");
+	printf("\n");
+	printf("温馨提示：\n");
+	printf("  升级版问世啦，，再也不用为换页时的回车\n");
+	printf("而晕头转向啦。考虑到软件的交互性，此次在\n");
+	printf("原版基础上做了很多优化\n");
+	printf("\n");
+	printf("\n");
+	printf("\n");
+	printf("操作方法：\n");
+	printf("  通过从键盘输入y或n来进行答题，输入后敲击回车键即可");
+	printf("\n");
+	printf("\n");
+	printf("\n");
+	printf("准备好了就开始答题吧\n");
+	printf("\n");
+	
+	printf("      (按回车键继续)");
+	getchar();
+	system("CLS");
+	f1(a);
+	f2(b);
+	f3(c);
+	f4(d);
+	f5(e);
+	f6(f);
+	f7(g,g1,g2,g3,g4);
+}
