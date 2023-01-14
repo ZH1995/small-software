@@ -24,10 +24,10 @@ public class qq {
     public qq() {
     }
     public static void main(String[] args) throws IOException {
-        String information = new String("��ã�����СQ");
+        String information = new String("你好，我是小Q");
         String mechine = new String();
    
-        JFrame frame = new JFrame("AIQ�������ϵͳ");
+        JFrame frame = new JFrame("AIQ聊天服务系统");
         
         JPanel panel = new JPanel(new GridLayout(1,2));     
         JPanel questionPanel = new JPanel(new GridLayout(1,1));
@@ -40,25 +40,21 @@ public class qq {
         JPanel send = new JPanel(new GridLayout(1,1));
         
         
-        JLabel question = new JLabel("�ң�");
-        final JTextArea enterQuestion = new JTextArea("���ڴ˴���������",2,60);
-        JLabel answer = new JLabel("AIQ��");
-        final JTextArea enterAnswer = new JTextArea("���",4,70);
+        JLabel question = new JLabel("我：");
+        final JTextArea enterQuestion = new JTextArea("请在此处输入问题",2,60);
+        JLabel answer = new JLabel("AIQ：");
+        final JTextArea enterAnswer = new JTextArea("你好",4,70);
         
-        JButton submit = new JButton("����");
+        JButton submit = new JButton("发送");
         
         frame.setSize(600, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         
-        enterAnswer.setFont(new Font("����",Font.BOLD,15));
-        enterQuestion.setFont(new Font("����",Font.BOLD,15));
+        enterAnswer.setFont(new Font("楷体",Font.BOLD,15));
+        enterQuestion.setFont(new Font("楷体",Font.BOLD,15));
 
         enterAnswer.setLineWrap(true);
-
-       
-        
-        
         
         ansLabPan.add(answer);
         answerPanel.add(enterAnswer);
@@ -128,15 +124,15 @@ public class qq {
 
     } 
     private static String machine(String quesiton) throws IOException {
-        //��������ˣ���������
+        //接入机器人，输入问题
         String APIKEY = "xxxxxxxxxx";
-        String INFO = URLEncoder.encode(quesiton, "utf-8");//���������������
+        String INFO = URLEncoder.encode(quesiton, "utf-8");//这里可以输入问题
         String getURL = "http://www.tuling123.com/openapi/api?key=" + APIKEY + "&info=" + INFO;
         URL getUrl = new URL(getURL);
         HttpURLConnection connection = (HttpURLConnection) getUrl.openConnection();
         connection.connect();
 
-        // ȡ������������ʹ��Reader��ȡ
+        // 取得输入流，并使用Reader读取
         BufferedReader reader = new BufferedReader(new InputStreamReader( connection.getInputStream(), "utf-8"));
         StringBuffer sb = new StringBuffer();
         String line = "";
@@ -144,7 +140,7 @@ public class qq {
             sb.append(line);
         }
         reader.close();
-        // �Ͽ�����
+        // 断开连接
         connection.disconnect();
         String[] ss = new String[10];
         String s = sb.toString();
